@@ -1,0 +1,400 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c651474d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--section navbar-->
+        <div class="navbar-fixed">
+          <nav class="blue darken-2">
+            <div class="container">
+              <div class="nav-wrapper">
+                <a href="#" class="brand-logo">MYadmin</a>
+                <a href="#" data-target="slide-out"  class="sidenav-trigger">
+                  <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <a href="index.html">Dasboard</a>
+                  </li>
+                  <li>
+                    <a href="page/posts.html">Posts</a>
+                  </li>
+                  <li>
+                    <a href="page/Comment.html">Categories</a>
+                  </li>
+                  <li>
+                    <a href="page/Comments.html">Comments</a>
+                  </li>
+                  <li>
+                    <a href="page/Users.html">Users</a>
+                  </li>
+                  <li>
+                    <span href="#" data-target="slide-out" class="sidenav-trigger" style="cursor: pointer;"><i class="material-icons">menu</i></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!--fin section navbar-->
+           <!--section cards-->
+        <section class="section section-icons grey lighten-4 center">
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col s12 m3">
+                  <div class="card-panel blue darken-1 white-text">
+                    <i class="fa-regular fa-face-grin"></i>
+                    <h5>Monthy Visitors<br>35900</h5>
+
+                    <div class="progress  ">
+                        <div class="determinate white" style="width: 70%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m3">
+                  <div class="card-panel">
+                    <i class="fa-solid fa-pencil"></i>
+                    <h5>Blog Posts<br>207</h5>
+                    <div class="progress">
+                        <div class="determinate blue darken-1" style="width: 70%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m3">
+                  <div class="card-panel blue darken-1 white-text">
+                    <i class="fa-solid fa-message"></i>
+                    <h5>Comments<br>2300</h5>                
+                    <div class="progress ">
+                        <div class="determinate white" style="width: 70%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="card-panel">
+                      <i class="fa-solid fa-user-group"></i>
+                      <h5>Users<br>410</h5>
+                      <div class="progress">
+                          <div class="determinate blue darken-1" style="width: 20%"></div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!-- fin section cards-->
+    <!--section daily-->
+    <section class="section section-icons bleu lighten-4 center">
+          <div class="container-fluid blue lighten-4">
+            <div class="row">
+              <div class=" card-panel col s12 m8">
+                <canvas id="myChart" width="900" height="328"></canvas>
+                    <script>
+                    const ctx = document.getElementById('myChart').getContext('2d');
+                    const myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['1', '2', '3', '4', '5', '6','7','8','9','10','11','12'],
+                            datasets: [{
+                                label: 'codeloccol',
+                                data: [12, 19, 3, 5, 2, 3,16,2,8],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)',
+                                    'rgba(222,444,33,1)'
+                                ],
+                                borderWidth: 2
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                    </script>
+                </div>
+              <div class="  col s12 m4 ">
+                <table class=" card-panel ">
+                  <tbody>
+                    <tr>
+                      <td>
+                      Latest Comments
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="row valign-wrapper">
+                          <div class="col s2">
+                            <img src="images/images-1.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                          </div>
+                          <div class="col s10">
+                            <span class="black-text">
+                              <h6>Saminou Moussa</h6>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, reprehenderit.</p>
+                              <h6><span class="teal-text">Approve </span>|<span class="red-text"> Deny</span></h6>
+                            </span>
+                          </div>
+                      </td>
+                      
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="row valign-wrapper">
+                          <div class="col s2">
+                            <img src="images/images.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                          </div>
+                          <div class="col s10">
+                            <span class="black-text start-text">
+                              <h6>Saminou Moussa</h6>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque</p>
+                            </span>
+                            <h6><span class="teal-text">Approve </span>|<span class="red-text"> Deny</span></h6>
+                          </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="row valign-wrapper">
+                          <div class="col s2">
+                            <img src="images/images.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                          </div>
+                          <div class="col s10">
+                            <span class="black-text">
+                              <h6>Saminou Moussa</h6>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, reprehenderit.</p>
+                              <h6><span class="teal-text">Approve </span>|<span class="red-text"> Deny</span></h6>
+                            </span>
+                          </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                      
+              </div>
+       </div>
+    </div>
+  </section>
+   <!-- fin section daily-->
+    <!--section post recents-->
+  <section >
+    <div class="row">
+<div class="card-panel col s12 m8">
+  <h3>Recent Posts</h3>
+  <table class=" tr ">
+    <thead>
+      <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td>Post One</td>
+        <td>Web Development</td>
+        <td><button class="btn waves-effect blue" type="submit" name="action">DETAILS
+        </button></td>
+      </tr>
+      <tr>
+        <td>Post Two</td>
+        <td>Graphic Design</td>
+        <td><button class="btn waves-effect blue" type="submit" name="action">DETAILS
+        </button></td>
+      </tr>
+      <tr>
+        <td>Post Three</td>
+        <td>Web Development</td>
+        <td><button class="btn waves-effect blue" type="submit" name="action">DETAILS
+        </button></td>
+      </tr>
+    </tbody>
+  </table>      
+</div>
+<div class=" col s12 m4">
+<div class=" card-panel ">
+  <h5>Quick Todos</h5>
+  <div class="row">
+    <div class="input-field col s12">
+      <input  id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">Add Todo..</label>
+    </div>
+    <ul class="collection with-header">
+      <li class="collection-item"><div>Todo One<a href="#!" class="secondary-content"><i class="material-icons black-text">clear</i></a></div></li>
+      <li class="collection-item"><div>Todo Two<a href="#!" class="secondary-content"><i class="material-icons black-text">clear</i></a></div></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+</section>
+ <!--section post recents-->
+  <!--Partie sidenav-->
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/a2 copie.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="images/images-1.jpg"></a>
+      <a href="#name"><span class="white-text name">John Doe</span></a>
+      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li>
+      <a href="index.html"><i class="material-icons">dashboard</i>Dasboard</a>
+    </li>
+    <li>
+      <a href="page/posts.html">Posts</a>
+    </li>
+    <li>
+      <a href="page/Comment.html">Categories</a>
+    </li>
+    <li>
+      <a href="page/Comments.html">Comments</a>
+    </li>
+    <li>
+      <a href="page/Users.html">Users</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Account Controls</a></li>
+    <li><a class="waves-effect" href="#!">Logout</a></li>
+  </ul>
+  <!-- fin Partie sidenav-->
+<!--section footer-->
+<section>
+  <footer class="page-footer blue darken-2 section">
+      <div class="container center">
+        MYadmin Codeleccol Copyright ©2022 
+      </div>
+      <div class="fixed-action-btn">
+  <a class="btn-floating btn-large bleu">
+    <i class="large material-icons red">add</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating bleu modal-trigger" href="#modal1"><i class="material-icons">create</i></a>
+    
+      <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 class="black-text left">Add Post</h4>
+            <div class="input-field">
+            <input type="text" class="text" placeholder="Email" id="Phone"> 
+          </div>
+         <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Select Role</option>
+      <option value="1">Professional Developer</option>
+      <option value="2">Hobbyist</option>
+      <option value="3">Student</option>
+      <option value="4">Managers</option>
+      <option value="5">Others</option>
+    </select>
+    <label>Materialize Select</label>
+    <div id="editor">
+      <p>This is some sample content.<br><br><br></p>
+  </div>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>
+  </div>
+</div>
+<div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn blue">SUBMIT</a>
+    </div>
+  </div>
+    </li>
+    <li><a class="btn-floating blue modal-trigger" href="#modal2"><i class="material-icons">folder</i></a>
+      <div id="modal2" class="modal">
+      <div class="modal-content">
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Email" id="Phone"> 
+        </div>
+      </div> 
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn blue">SUBMIT</a>
+    </div>
+    </div>
+    </li>
+    <li><a class="btn-floating blue modal-trigger" href="#modal3"><i class="material-icons">people</i></a>
+      <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 class="black-text left">Add User</h4>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Name" id="Phone"> 
+        </div>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Email" id="Phone"> 
+        </div>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Password" id="Phone"> 
+        </div>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Comfirm Password" id="Phone"> 
+        </div>
+      </div>
+      
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-blue">SUBMIT</a>
+    </div>
+    </div>
+    </li>
+  </ul>
+</div>
+</footer>
+      
+</section> 
+<!-- fin section footer--> 
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    $('select').formSelect();
+ });
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+    //materiel boxed
+    $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+   
+     const mb = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(mb, {});
+
+    </script>
+    </body>
+  </html>

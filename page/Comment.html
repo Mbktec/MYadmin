@@ -1,0 +1,253 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7c651474d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+       <!--section navbar-->
+       <div class="navbar-fixed">
+        <nav class="blue darken-2">
+          <div class="container">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">MYadmin</a>
+              <a href="#" data-target="slide-out"  class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li>
+                  <a href="../index.html">Dasboard</a>
+                </li>
+                <li>
+                  <a href="posts.html">Posts</a>
+                </li>
+                <li>
+                  <a href="Comment.html">Categories</a>
+                </li>
+                <li>
+                  <a href="Comments.html">Comments</a>
+                </li>
+                <li>
+                  <a href="Users.html">Users</a>
+                </li>
+                <li>
+                  <span href="#" data-target="slide-out" class="sidenav-trigger" style="cursor: pointer;"><i class="material-icons">menu</i></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--fin section navbar-->
+      
+<section class="container">
+    <div class="card-panel col s12 m8">
+        <h3>Categories</h3>
+        <table class=" tr ">
+          <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th> Date Created</th>
+                <th></th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            <tr >
+              <td>Post One</td>
+              <td>Web Development</td>
+              <td>Oct 1,2019</td>
+              <td><button class="btn waves-effect blue-white" type="submit" name="action">DETAILS
+              </button></td>
+            </tr>
+            <tr>
+              <td>Post Two</td>
+              <td>Graphic Design</td>
+              <td>Oct 2,2019</td>
+              <td><button class="btn waves-effect blue-light" type="submit" name="action">DETAILS
+              </button></td>
+            </tr>
+            <tr>
+              <td>Post Three</td>
+              <td>Web Development</td>
+              <td>Oct 3,2019</td>
+              <td><button class="btn waves-effect blue-light" type="submit" name="action">DETAILS
+              </button></td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td>Graphic Design</td>
+                <td>Oct 5,2019</td>
+                <td><button class="btn waves-effect blue-light" type="submit" name="action">DETAILS
+                </button></td>
+              </tr>
+          </tbody>
+        </table>
+        <ul class="pagination  ">
+          <li class="disabled"><a href="#!"><i class="material-icons blue-text">chevron_left</i></a></li>
+          <li class="active blue"><a href="#!">1</a></li>
+          <li class="waves-effect"><a class="blue-text" href="#!">2</a></li>
+          <li class="waves-effect"><a class="blue-text" href="#!">3</a></li>
+          <li class="waves-effect blue-text"><a class="blue-text" href="#!">4</a></li>
+          <li class="waves-effect blue-text"><a  class="blue-text" href="#!">5</a></li>
+          <li class="waves-effect blue-text"><a class="blue-text" href="#!"><i class="material-icons blue-text">chevron_right</i></a></li>
+        </ul>   
+      </div>
+</section>
+
+<!--Partie sidenav-->
+<ul id="slide-out" class="sidenav">
+  <li><div class="user-view">
+    <div class="background">
+      <img src="../images/a2 copie.jpg">
+    </div>
+    <a href="#user"><img class="circle" src="../images/images-1.jpg"></a>
+    <a href="#name"><span class="white-text name">John Doe</span></a>
+    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+  </div></li>
+  <li>
+    <a href="index.html"><i class="material-icons">dashboard</i>Dasboard</a>
+  </li>
+  <li>
+    <a href="page/posts.html">Posts</a>
+  </li>
+  <li>
+    <a href="page/Comment.html">Categories</a>
+  </li>
+  <li>
+    <a href="page/Comments.html">Comments</a>
+  </li>
+  <li>
+    <a href="page/Users.html">Users</a>
+  </li>
+  <li><div class="divider"></div></li>
+  <li><a class="subheader">Account Controls</a></li>
+  <li><a class="waves-effect" href="#!">Logout</a></li>
+</ul>
+<!-- fin Partie sidenav-->
+ 
+
+
+<!--section footer-->
+<section>
+  <footer class="page-footer blue darken-2 section">
+      <div class="container center">
+      BiziBizi ©2022 
+      </div>
+      <div class="fixed-action-btn">
+  <a class="btn-floating btn-large bleu">
+    <i class="large material-icons red">add</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating bleu modal-trigger" href="#modal1"><i class="material-icons">create</i></a>
+    
+      <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 class="black-text left">Add Post</h4>
+            <div class="input-field">
+            <input type="text" class="text" placeholder="Email" id="Phone"> 
+          </div>
+         <div class="input-field col s12">
+    <select>
+      <option value="" disabled selected>Select Role</option>
+      <option value="1">Professional Developer</option>
+      <option value="2">Hobbyist</option>
+      <option value="3">Student</option>
+      <option value="4">Managers</option>
+      <option value="5">Others</option>
+    </select>
+    <label>Materialize Select</label>
+    <div id="editor">
+      <p>This is some sample content.<br><br><br></p>
+  </div>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>
+  </div>
+</div>
+<div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn blue">SUBMIT</a>
+    </div>
+  </div>
+    </li>
+    <li><a class="btn-floating blue modal-trigger" href="#modal2"><i class="material-icons">folder</i></a>
+      <div id="modal2" class="modal">
+      <div class="modal-content">
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Email" id="Phone"> 
+        </div>
+      </div> 
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn blue">SUBMIT</a>
+    </div>
+    </div>
+    </li>
+    <li><a class="btn-floating blue modal-trigger" href="#modal3"><i class="material-icons">people</i></a>
+      <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 class="black-text left">Add User</h4>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Name" id="Phone"> 
+        </div>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Email" id="Phone"> 
+        </div>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Password" id="Phone"> 
+        </div>
+        <div class="input-field">
+          <input type="text" class="text" placeholder="Comfirm Password" id="Phone"> 
+        </div>
+      </div>
+      
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-blue">SUBMIT</a>
+    </div>
+    </div>
+    </li>
+  </ul>
+</div>
+</footer>
+      
+</section> 
+<!-- fin section footer-->      
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    $('select').formSelect();
+ });
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+    //materiel boxed
+    $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+   
+     const mb = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(mb, {});
+
+    </script>
+    </body>
+  </html>
